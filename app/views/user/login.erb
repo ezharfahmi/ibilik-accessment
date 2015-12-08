@@ -1,0 +1,19 @@
+<h1>Login Page</h1>
+
+<form action="/users/login" name="loginform" method="post">
+	<table>
+		<tr>
+			<td><label>Email: </label></td>
+			<td><input type="email" name="email" required></td>
+		</tr>
+		<tr>
+			<td><label>Password: </label></td>
+			<td><input type="password" name="password" required></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Login" onclick="validate();"></td>
+		</tr>
+	</table>
+</form>
+
+<p><a href="/users/new"> Register Here</a></p>

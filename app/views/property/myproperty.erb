@@ -1,0 +1,9 @@
+<h1>Your Property</h1>
+
+<ul>
+	<% @property.each do |property| %>
+		<li><a href="/myproperties/<%= property.id %>"><%= property.title %></a></li>
+	<% end %>
+</ul>
+
+<a href="/users/<%= @user.id %>"><button>Back to your profile</button></a>

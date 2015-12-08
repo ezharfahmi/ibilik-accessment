@@ -1,0 +1,29 @@
+<h1> Property by <%= @property.user.name %></h1>
+<table>
+	<tr>
+		<td><%= @property.location %></td>
+	</tr>
+	<tr>
+		<td><%= @property.title %></td>
+	</tr>
+		<tr>
+		<td><%= @property.description %></td>
+	</tr>
+		<tr>
+		<td><%= @property.rental %></td>
+	</tr>
+	<tr>
+		<td><a href="/users/<%= @user.id %>"><button>Back to your profile</button></a></td>
+	</tr>
+	<tr>
+		<td><a href="/properties/<%= @property.id %>/edit"><button>Update you property</button></a></td>
+	</tr>
+	<tr>
+		<td>
+			<form action="/properties/<%= @property.id %>" method="post">
+			<input type="hidden" name="_method" value="delete">
+			<input type="submit" value="Delete Property">
+		</td>
+	</tr>
+</form>
+</table>

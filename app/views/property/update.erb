@@ -1,0 +1,46 @@
+<h1> Update Your Property </h1>
+
+<form action="/myproperties/<%= @property.id %>" method="post">
+	<input type="hidden" name="_method" value="patch">
+	<table>
+		<tr>
+			<td>
+				<label>Location: </label>
+			</td>
+			<td>
+				<select name="location">
+					<option value="<%= @property.location%>"><%= @property.location%></option>
+					<option value="Kuala Lumpur">Kuala Lumpur</option>
+					<option value="Johor">Johor</option>
+					<option value="Kedah">Kedah</option>
+					<option value="Kelantan">Kelantan</option>
+					<option value="Melaka">Melaka</option>
+					<option value="Negeri Sembilan">Negeri Sembilan</option>
+					<option value="Pahang">Pahang</option>
+					<option value="Penang">Penang</option>
+					<option value="Perak">Perak</option>
+					<option value="Perlis">Perlis</option>
+					<option value="Selangor">Selangor</option>
+					<option value="Sabah">Sabah</option>
+					<option value="Sarawak">Sarawak</option>
+					<option value="Terrenganu">Terrenganu</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label>Title: </label></td>
+			<td><input type="text" name="title" value="<%= @property.title%>"></td>
+		</tr>
+		<tr>
+			<td><label>Description: </label></td>
+			<td><textarea rows="10" cols="80" name="description" ><%= @property.description%></textarea></td>
+		</tr>
+		<tr>
+			<td><label>Monthly Rental: </label></td>
+			<td><input type="integer" name="rental" value="<%= @property.rental%>"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Update your property"></td>
+		</tr>
+	<table>
+</form>

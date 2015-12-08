@@ -20,6 +20,8 @@ GEM
     daemons (1.2.2)
     diff-lcs (1.2.5)
     eventmachine (1.0.7)
+    hoe (3.14.2)
+      rake (>= 0.8, < 11.0)
     i18n (0.7.0)
     json (1.8.2)
     minitest (5.6.1)
@@ -82,6 +84,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
+  hoe
   pg
   puma
   rails_12factor
@@ -92,3 +95,6 @@ DEPENDENCIES
   sinatra-activerecord
   sinatra-contrib
   thin
+
+BUNDLED WITH
+   1.10.6

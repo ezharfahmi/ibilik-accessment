@@ -1,0 +1,24 @@
+<h1> Profile Page </h1>
+
+<table border='1'>
+	<tr>
+		<td>Name: <%= @user.name %></td>
+	</tr>
+	<tr>
+		<td>Email: <%= @user.email %></td>
+	</tr>
+	<tr>
+		<td><a href="/users/logout"><button>Logout</button></a></td>
+	</tr>
+	<tr>
+		<td><a href="/properties/new"><button>Create New Properties</button></a></td>
+	</tr>
+	<tr>
+		<td><a href="/properties"><button>My Property</button></a></td>
+	</tr>
+
+	<tr>
+		<td><a href="/allproperties"><button>All Property</button></a></td>
+	</tr>
+
+</table>

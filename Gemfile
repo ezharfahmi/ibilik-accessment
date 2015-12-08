@@ -20,7 +20,7 @@ gem 'pg'
 
 # Adding rake for management
 gem 'rake'
-
+gem 'hoe'
 # Adding rspec for running unit testing
 gem 'rspec'
 
