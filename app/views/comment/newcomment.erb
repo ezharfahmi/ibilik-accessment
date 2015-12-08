@@ -1,8 +1,9 @@
 <h3> Comment Here </h3>
 <table>
-<form action="/comments/<%= @property.id %>" method="post">
+<form action="/comments" method="post">
 		<td>
 			<textarea rows="10" cols="80" name="comment"></textarea>
+			<input type="hidden" name="property_id" value=>
 		</td>
 	</tr>
 	<tr>

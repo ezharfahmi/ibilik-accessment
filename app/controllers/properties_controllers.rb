@@ -34,7 +34,6 @@ end
 #SHOW THE PROPERTY
 get '/properties/:id' do
 	@property = Property.find(params[:id])
-	@comment = Comment.all
 	@user = User.find(session[:user_id])
 	erb :'property/view'
 end

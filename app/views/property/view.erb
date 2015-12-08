@@ -15,46 +15,47 @@
 	<tr>
 		<td><a href="/users/<%= @user.id %>"><button>Back to your profile</button></a></td>
 	</tr>
-	<tr>
-		<td><a href="/comments/<%= @property.id %>/new"><button>Comment Here</button></a></td>
+
+<br>
+<br>
+
+<table>
+	<h3> Comment Here </h3>
+<form action="/comments" method="post">
+		<td>
+			<textarea rows="10" cols="80" name="comment"></textarea>
+			<input type="hidden" name="property_id" value="<%=@property.id%>">
+
+		</td>
 	</tr>
+	<tr>
+		<td><input type="submit" value="Comment"></td>
+	</tr>
+</form>
 </table>
 <br>
 <br>
-<br>
-<h3> Comment : </h3>
-<% @comment.each do |komen| %>
-	
-	<p><%= komen.comment %> by <%= @property.user.name %></p>
 
-<% end %>
-
-
-
-<!-- <table>
-	<tr>
-		<td>Comment Here:</td>
-	</tr>
-	<tr>
-		<form action="/comments/<%= @property.id %>" method="post">
-			<td>
-				<textarea rows="10" cols="80" name="comment"></textarea>
-			
-			</td>
-		</tr>
-		<tr>
-			<td><input type="submit" value="Comment"></td>
-		</form>
-	</tr>		
-</table>
-<br>
 <table>
 	<tr>
 		<td>Comment by user: </td>
 	</tr>
-		<% @property.comments.each do |komen| %>
+		<% @property.comments.each do |komen|  %>
 			<tr>
-				<td><%= komen.comment %></td>
+				<td><%= komen.comment %> by <%=komen.user.name %></td>
+			</tr>
+			<tr>
+				<% if komen.user.id == session[:user_id] %>
+					<td><a href="/comments/<%= komen.id%>/edit"><button>edit</button></a></td>
+					<td>
+						<form action="/comments/<%= komen.id %>" method="post">
+						<input type="hidden" name="_method" value="delete">
+						<input type="submit" value="Delete Comment">
+					</td>
+				<% end %>
 			</tr>
 		<% end %>
-</table> -->
+</table>
+
+
+
