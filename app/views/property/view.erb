@@ -15,6 +15,14 @@
 	<tr>
 		<td><a href="/users/<%= @user.id %>"><button>Back to your profile</button></a></td>
 	</tr>
+	<tr>
+		<form action = "/bookings/new" method="get">
+			<td>
+				<input type="hidden" name="id" value="<%= @property.id%>">
+				<input type="submit" value="Book This Property">
+			</td>
+		</form>
+	</tr>
 
 <br>
 <br>
